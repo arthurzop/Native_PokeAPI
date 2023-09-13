@@ -196,8 +196,8 @@ const styles = StyleSheet.create({
     borderRadius: 1000,
     marginBottom: 40,
     marginTop: 10,
-    width: 260,
-    height: 260,
+    width: 240,
+    height: 240,
   },
 
   pokemonType: {
