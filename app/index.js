@@ -98,15 +98,15 @@ export default function App() {
             <Image source={{ uri: pokemon.img }} style={styles.pokemonImage} />
             <Text style={styles.pokemonType}>
               Tipo: 
-                <Text style={styles.types}>
+                <View style={styles.types}>
                     <Text style={styles[pokemon.type]}>{pokemon.type}</Text>
-                </Text>
+                </View>
               {type2 && (
-                <Text style={styles.types}>
+                <View style={styles.types}>
                     <Text style={styles[type2]}>
                     { type2}
                     </Text>
-                </Text>
+                </View>
               )}
             </Text>
             <Text style={styles.pokemonType}>Nº Pokedex: {pokemon.id}</Text>
@@ -125,6 +125,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     textTransform: 'capitalize',
+    overflow: 'scroll',
+    height: 'auto',
   },
 
   titulo: {
@@ -163,7 +165,7 @@ const styles = StyleSheet.create({
   buttonText: {
     textAlign: "center",
     paddingTop: 10,
-    fontSize: 18
+    fontSize: 18,
   },
 
   display: {
@@ -212,27 +214,136 @@ const styles = StyleSheet.create({
 
   types: {
     textTransform: 'capitalize',
-    borderRadius: 10,
-},
+    borderRadius: 20,
+    paddingLeft: 8,
+  },
 
   /* cores de fundo para cada tipo */
- fire:        { backgroundColor: '#F6AD7C',},
- water:       { backgroundColor: '#9EB9F5',},
- normal:      { backgroundColor: '#C8C6A7',},
- grass:       { backgroundColor: '#A8DD90',},
- fighting:    { backgroundColor: '#D67B76',},
- flying:      { backgroundColor: '#C8B9F6',},
- dark:        { backgroundColor: '#A49389',},
- fairy:       { backgroundColor: '#F6BECC',},
- dragon:      { backgroundColor: '#A27FF9',},
- poison:      { backgroundColor: '#C384C2',},
- psychic:     { backgroundColor: '#FA94B3',},
- ghost:       { backgroundColor: '#A593BD',},
- ice:         { backgroundColor: '#BCE7E6',},
- bug:         { backgroundColor: '#C7D06F',},
- steel:       { backgroundColor: '#D2D2DF',},
- rock:        { backgroundColor: '#D2C27D',},
- ground:      { backgroundColor: '#EBD89F',},
- electric:    { backgroundColor: '#F9E17B',}
+
+ fire:        { backgroundColor: '#F6AD7C',
+                textTransform: 'capitalize',
+                fontWeight: 'bold',
+                borderRadius: 10,
+                padding: 8,
+},
+
+ water:       { backgroundColor: '#9EB9F5',
+                textTransform: 'capitalize',
+                fontWeight: 'bold',
+                borderRadius:  10,
+                padding: 8
+},
+
+ normal:      { backgroundColor: '#C8C6A7',
+                textTransform: 'capitalize',
+                fontWeight: 'bold',
+                borderRadius: 10,
+                padding: 8
+},
+
+ grass:       { backgroundColor: '#A8DD90',
+                textTransform: 'capitalize',
+                fontWeight: 'bold',
+                borderRadius: 10,
+                padding: 8
+},
+
+ fighting:    { backgroundColor: '#D67B76',
+                textTransform: 'capitalize',
+                fontWeight: 'bold',
+                borderRadius: 10,
+                padding: 8
+},
+
+ flying:      { backgroundColor: '#C8B9F6',
+                textTransform: 'capitalize',
+                fontWeight: 'bold',
+                borderRadius: 10,
+                padding: 8
+},
+
+ dark:        { backgroundColor: '#A49389',
+                textTransform: 'capitalize',
+                fontWeight: 'bold',
+                borderRadius: 10,
+                padding: 8
+},
+
+ fairy:       { backgroundColor: '#F6BECC',
+                textTransform: 'capitalize',
+                fontWeight: 'bold',
+                borderRadius: 10,
+                padding: 8
+},
+
+ dragon:      { backgroundColor: '#A27FF9',
+                textTransform: 'capitalize',
+                fontWeight: 'bold',
+                borderRadius: 10,
+                padding: 8
+},
+
+ poison:      { backgroundColor: '#C384C2',
+                textTransform: 'capitalize',
+                fontWeight: 'bold',
+                borderRadius: 10,
+                padding: 8
+},
+
+ psychic:     { backgroundColor: '#FA94B3',
+                textTransform: 'capitalize',
+                fontWeight: 'bold',
+                borderRadius: 10,
+                padding: 8
+},
+
+ ghost:       { backgroundColor: '#A593BD',
+                textTransform: 'capitalize',
+                fontWeight: 'bold',
+                borderRadius: 10,
+                padding: 8
+},
+
+ ice:         { backgroundColor: '#BCE7E6',
+                textTransform: 'capitalize',
+                fontWeight: 'bold',
+                borderRadius: 10,
+                padding: 8
+},
+
+ bug:         { backgroundColor: '#C7D06F',
+                textTransform: 'capitalize',
+                fontWeight: 'bold',
+                borderRadius: 10,
+                padding: 8
+},
+
+ steel:       { backgroundColor: '#D2D2DF',
+                textTransform: 'capitalize',
+                fontWeight: 'bold',
+                borderRadius: 10,
+                padding: 8
+},
+
+ rock:        { backgroundColor: '#D2C27D',
+                textTransform: 'capitalize',
+                fontWeight: 'bold',
+                borderRadius: 10,
+                padding: 8
+},
+
+ ground:      { backgroundColor: '#EBD89F',
+                textTransform: 'capitalize',
+                fontWeight: 'bold',
+                borderRadius: 10,
+                padding: 8
+},
+
+ electric:    { backgroundColor: '#F9E17B',
+                textTransform: 'capitalize',
+                fontWeight: 'bold',
+                borderRadius: 10,
+                padding: 8
+}
 
 })
